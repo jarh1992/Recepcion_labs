@@ -1,0 +1,22 @@
+<div class="modal fade" tabindex="-1" id="{%  block id_modal %}{% endblock %}" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{%  block title %}{% endblock %}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="{% url 'index' %}" method="post"> {% csrf_token %}
+                <input name="flag" type="text" value="{%  block value-flag %}{% endblock %}" hidden>
+                <div class="modal-body">
+                    {% block modal-body-form %}{% endblock %}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button name="action_button" type="submit" class="{%  block action-btn-class %}{% endblock %}">{%  block action-btn-text %}{% endblock %}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

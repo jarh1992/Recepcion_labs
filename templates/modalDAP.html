@@ -1,0 +1,27 @@
+<!-- modal delete academic program -->
+{% extends 'modalProg.html' %}
+{%  block id_modal %}modalDAP{% endblock %}
+{%  block title %} Eliminar programa {% endblock %}
+{%  block value-flag %}dap{% endblock %}
+{% block modal-body-form %}
+    <table class="table table-bordered table-dark">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Programa</th>
+                <th scope="col">codigo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for object in list %}
+                <tr>
+                    <td><input type="checkbox" name={{ object.student.program }}></td>
+                    <td>{{ object.student.program }}</td>
+                    <td>{{ object.student.cod }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+{%  block action-btn-class %} btn btn-danger {% endblock %}
+{%  block action-btn-text %} Eliminar {% endblock %}
