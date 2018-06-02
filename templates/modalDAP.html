@@ -1,8 +1,8 @@
 <!-- modal delete academic program -->
-{% extends 'modalProg.html' %}
-{%  block id_modal %}modalDAP{% endblock %}
-{%  block title %} Eliminar programa {% endblock %}
-{%  block value-flag %}dap{% endblock %}
+{% extends 'modalBase.html' %}
+{% block id_modal %}modalDAP{% endblock %}
+{% block title %} Eliminar programa {% endblock %}
+{% block value-flag %}dap{% endblock %}
 {% block modal-body-form %}
     <table class="table table-bordered table-dark">
         <thead>
@@ -13,11 +13,11 @@
             </tr>
         </thead>
         <tbody>
-            {% for object in list %}
+            {% for p in programs %}
                 <tr>
-                    <td><input type="checkbox" name={{ object.student.program }}></td>
-                    <td>{{ object.student.program }}</td>
-                    <td>{{ object.student.cod }}</td>
+                    <td><input type="radio" name="del" value="{{ p.cod }}"></td>
+                    <td>{{ p.name }}</td>
+                    <td>{{ p.cod }}</td>
                 </tr>
             {% endfor %}
         </tbody>

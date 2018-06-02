@@ -51,16 +51,26 @@ def index_view(request):
         return HttpResponse(json.dumps(response_data), content_type="application/json")
     elif request.method == 'POST':
         op = request.POST.get('flag', 0)
-        if op == "1":
+        if op == "sas":
             '''
             Save and add student to a Registry
             '''
             student = Student()
-            student.name = request.POST.get('name', 0)
-            student.ced = request.POST.get('ced', 0)
-            student.cod = request.POST.get('cod', 0)
-            student.program = Program.objects.get(name=request.POST.get('prog_name', None))
+            student.name = request.POST.get('sas_name', '')
+            student.ced = request.POST.get('sas_ced', '')
+            student.cod = request.POST.get('sas_cod', '')
+            prog_cod = request.POST.get('sas_progs', None)
+            student.program = Program.objects.get(cod=prog_cod)
             student.save()
+            reg = Registry()
+            reg.student = student
+            pc = Pc()
+            pc.num = 1
+            pc.pc_disp = False
+            pc.save()
+            reg.pc = pc
+            reg.save()
+
         elif op == "2":
             '''
             finalizar servicio (liberar Student y Pc)
@@ -77,14 +87,23 @@ def index_view(request):
             program.name = request.POST.get('name', None)
             program.cod = request.POST.get('cod', None)
             program.save()
+        elif op == "dap":
+            '''
+            Delete academic program
+            '''
+            cod = request.POST.get('del', None)
+            Program.objects.filter(cod=cod).delete()
 
     form_sas = FormSAS()
     form_addprog = FormAddProg()
-    reg_list = Registry.objects.all()
+    reg_list = list(Registry.objects.values())
+    print(reg_list)
+    programs = list(Program.objects.values('name', 'cod'))
     context = {
         'list': reg_list,
         'form_sas': form_sas,
-        'form_addprog': form_addprog
+        'form_addprog': form_addprog,
+        'programs': programs
     }
     template = loader.get_template('Index.html')
     return HttpResponse(template.render(context, request))

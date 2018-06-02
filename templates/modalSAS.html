@@ -1,51 +1,38 @@
 <!-- save and add student -->
-<div class="modal fade" tabindex="-1" id="modalSAS" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Guardar y Agregar Estudiante</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form action="{% url 'index' %}" method="post"> {% csrf_token %}
-                <input name="flag" type="text" value="1" hidden>
-                <div class="modal-body">
-                    <div class="form-group row">
-                        <label for="sas_name" class="col-sm-4">Nombre:</label>
-                        <div class="col-sm-8">
-                            <input name="sas_name" id="sas_name" class="form-control" maxlength="60" required="" type="text">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="sas_ced" class="col-sm-4">Cédula:</label>
-                        <div class="col-sm-8">
-                            <input name="sas_ced" id="sas_ced" class="form-control" required="" type="text">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="sas_cod" class="col-sm-4">Codigo estudiantil:</label>
-                        <div class="col-sm-8">
-                            <input name="sas_cod" id="sas_cod" class="form-control" required="" type="text">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="sas_progs" class="col-sm-4">Programa de Estudio:</label>
-                        <div class="col-sm-8">
-                            <select name="sas_progs" id="sas_progs" class="custom-select">
-                            {% for p in programs %}
-                                <option value="{{ p.cod }}">{{ p.name }}</option>
-                            {% endfor %}
-                            </select>
-                        </div>
-                    </div>
-                    <!--{{ form_sas }}-->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary">Guardar y agregar</button>
-                </div>
-            </form>
+{% extends 'modalBase.html' %}
+{% block id_modal %}modalSAS{% endblock %}
+{% block title %} Guardar y Agregar Estudiante {% endblock %}
+{% block value-flag %}sas{% endblock %}
+{% block modal-body-form %}
+    <div class="form-group row">
+        <label for="sas_name" class="col-sm-4">Nombre:</label>
+        <div class="col-sm-8">
+            <input name="sas_name" id="sas_name" class="form-control" maxlength="60" required="" type="text">
         </div>
     </div>
-</div>
+    <div class="form-group row">
+        <label for="sas_ced" class="col-sm-4">Cédula:</label>
+        <div class="col-sm-8">
+            <input name="sas_ced" id="sas_ced" class="form-control" required="" type="text">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="sas_cod" class="col-sm-4">Codigo estudiantil:</label>
+        <div class="col-sm-8">
+            <input name="sas_cod" id="sas_cod" class="form-control" required="" type="text">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="sas_progs" class="col-sm-4">Programa de Estudio:</label>
+        <div class="col-sm-8">
+            <select name="sas_progs" id="sas_progs" class="custom-select">
+            {% for p in programs %}
+                <option value="{{ p.cod }}">{{ p.name }}</option>
+            {% endfor %}
+            </select>
+        </div>
+    </div>
+    <!--{{ form_sas }}-->
+{% endblock %}
+{%  block action-btn-class %} btn btn-primary {% endblock %}
+{%  block action-btn-text %} Guardar y agregar {% endblock %}
