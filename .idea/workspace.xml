@@ -2,24 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="669364f9-9c68-409f-a0ea-2bb4271bc616" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Recepcion.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Recepcion.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0a28dd14-549c-402e-a60e-5f37276ff09a.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/42d66966-e28c-4b5b-99a7-44e69988d270.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a3b13c21-ad8b-4936-8db3-ca444f6959ed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a3b13c21-ad8b-4936-8db3-ca444f6959ed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recepcion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recepcion/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0002_auto_20180516_1817.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0003_program_cod.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recepcion/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recepcion/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registro/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/modalDAP.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/modalDAP.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/modalNAP.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/modalNAP.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/modalProg.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/modalBase.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/modalSAS.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/modalSAS.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/modalUAP.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -66,8 +56,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/registro/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="99" column="18" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
+            <state relative-caret-position="119">
+              <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -75,8 +65,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registro_registry" pinned="false" current-in-tab="false">
-        <entry file="das://a3b13c21-ad8b-4936-8db3-ca444f6959ed/schema/main/table/registro_registry">
+      <file leaf-file-name="registro_student" pinned="false" current-in-tab="false">
+        <entry file="das://a3b13c21-ad8b-4936-8db3-ca444f6959ed/schema/main/table/registro_student">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -84,29 +74,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Recepcion/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="109" column="27" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/Index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="52" column="49" lean-forward="true" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modalSAS.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/modalSAS.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="21" column="24" selection-start-line="21" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modalDAP.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/modalDAP.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+            <state relative-caret-position="238">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
             </state>
           </provider>
         </entry>
@@ -120,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/registro/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="32" column="55" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+            <state relative-caret-position="315">
+              <caret line="32" column="65" selection-start-line="32" selection-start-column="65" selection-end-line="32" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -162,7 +143,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/templates/Modal-GyA.html" />
-        <option value="$PROJECT_DIR$/Recepcion/settings.py" />
         <option value="$PROJECT_DIR$/registro/admin.py" />
         <option value="$PROJECT_DIR$/registro/forms.py" />
         <option value="$PROJECT_DIR$/templates/modalNP.html" />
@@ -174,6 +154,7 @@
         <option value="$PROJECT_DIR$/templates/modalDAP.html" />
         <option value="$PROJECT_DIR$/templates/modalSAS.html" />
         <option value="$PROJECT_DIR$/Recepcion/urls.py" />
+        <option value="$PROJECT_DIR$/Recepcion/settings.py" />
         <option value="$PROJECT_DIR$/registro/models.py" />
         <option value="$PROJECT_DIR$/registro/views.py" />
         <option value="$PROJECT_DIR$/templates/Index.html" />
@@ -200,6 +181,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -232,7 +214,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -312,22 +293,22 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4993573" weight="0.32882273" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5012854" side_tool="true" weight="0.255751" />
+      <window_info anchor="bottom" id="TODO" order="13" sideWeight="0.4993573" weight="0.32882273" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5012854" side_tool="true" weight="0.255751" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49871466" weight="0.32882273" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.33423546" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49871466" weight="0.255751" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.2909337" />
-      <window_info anchor="bottom" id="Database Console" order="8" weight="0.32882273" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17673522" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.19087404" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49871466" weight="0.32882273" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.33423546" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.2909337" />
+      <window_info anchor="bottom" id="Database Console" order="10" weight="0.32882273" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17866324" />
+      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.19087404" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32882273" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32969153" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -537,13 +518,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Modal-GyA.html" />
-    <entry file="file://$PROJECT_DIR$/Recepcion/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1643">
-          <caret line="123" column="37" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/registro/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -559,13 +533,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/modalUP.html" />
     <entry file="file://$PROJECT_DIR$/templates/modalProg-bodyfooter.html" />
-    <entry file="file://$PROJECT_DIR$/templates/modalUAP.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/modalUAP.html" />
     <entry file="file://$PROJECT_DIR$/templates/modalNAP.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -573,27 +541,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://42d66966-e28c-4b5b-99a7-44e69988d270/schema/main/table/registro_registry">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://42d66966-e28c-4b5b-99a7-44e69988d270/schema/main/table/registro_program">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://42d66966-e28c-4b5b-99a7-44e69988d270/schema/main/table/registro_student">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://42d66966-e28c-4b5b-99a7-44e69988d270/schema/main/table/registro_registry" />
+    <entry file="das://42d66966-e28c-4b5b-99a7-44e69988d270/schema/main/table/registro_program" />
+    <entry file="das://42d66966-e28c-4b5b-99a7-44e69988d270/schema/main/table/registro_student" />
     <entry file="file://$PROJECT_DIR$/registro/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -605,13 +555,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/modalDAP.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -635,7 +578,21 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a8291d86-037d-43ab-8f5b-f21165e0e64d/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://a3b13c21-ad8b-4936-8db3-ca444f6959ed/schema/main/table/registro_student">
+    <entry file="file://$PROJECT_DIR$/templates/modalDAP.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/modalSAS.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="21" column="24" selection-start-line="21" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a3b13c21-ad8b-4936-8db3-ca444f6959ed/schema/main/table/registro_registry">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -649,41 +606,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/modalSAS.html">
+    <entry file="file://$PROJECT_DIR$/Recepcion/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="21" column="24" selection-start-line="21" selection-end-line="22" />
+        <state relative-caret-position="253">
+          <caret line="109" column="27" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Index.html">
+    <entry file="file://$PROJECT_DIR$/registro/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="52" column="49" lean-forward="true" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
+        <state relative-caret-position="315">
+          <caret line="32" column="65" selection-start-line="32" selection-start-column="65" selection-end-line="32" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/registro/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="99" column="18" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
+        <state relative-caret-position="119">
+          <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="das://a3b13c21-ad8b-4936-8db3-ca444f6959ed/schema/main/table/registro_registry">
+    <entry file="das://a3b13c21-ad8b-4936-8db3-ca444f6959ed/schema/main/table/registro_student">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/registro/models.py">
+    <entry file="file://$PROJECT_DIR$/templates/Index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="32" column="55" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+        <state relative-caret-position="238">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>

@@ -13,7 +13,7 @@ class Student(models.Model):
     name = models.CharField(max_length=60, blank=False, null=False, default='None')
     ced = models.CharField(primary_key=True, max_length=60, blank=False, null=False, unique=True, default='-1')
     cod = models.CharField(max_length=60, blank=False, null=False, unique=True, default='None')
-    program = models.OneToOneField(Program, on_delete=models.CASCADE)
+    program = models.ForeignKey(Program, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
@@ -27,10 +27,10 @@ class Pc(models.Model):
         return self.num
 
 
-class Registry(models.Model):
+class Loan(models.Model):
     student = models.OneToOneField(Student, on_delete=False, default=None)
     entry_time = models.DateTimeField(auto_now_add=True)
-    departure_time = models.DateTimeField(auto_now=True)
+    departure_time = models.DateTimeField(default=None, null=True)
     pc = models.OneToOneField(Pc, on_delete=False, default=None)
 
     def __str__(self):

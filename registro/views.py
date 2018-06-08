@@ -19,6 +19,24 @@ class IndexView(ListView):
         return super().get_context_data(object_list=object_list, **kwargs)
 '''
 
+'''
+def create_obj(obj, *args):
+    if type(obj) == Student:
+        student = obj()
+        student.name = args[0]
+        student.ced = args[1]
+        student.cod = args[2]
+        prog_cod = args[3]
+        student.program = Program.objects.get(cod=prog_cod)
+        student.save()
+    elif type(obj) == Pc:
+        pc = obj()
+        pc.num = args[0]
+        pc.pc_disp = args[1]
+        pc.save()
+    elif type(obj) == Student:
+'''
+
 
 def index_view(request):
     if request.is_ajax():
@@ -30,7 +48,7 @@ def index_view(request):
         if id is not None:
             try:
                 student = Student.objects.get(ced=id)
-                registry = Registry.objects.get(student=student)
+                registry = Loan.objects.get(student=student)
                 response = 3
             except Student.DoesNotExist as sn:
                 progs = list(Program.objects.values('name', 'cod'))
@@ -38,7 +56,7 @@ def index_view(request):
                     'response': 1,
                     'programs': progs
                 }
-            except Registry.DoesNotExist as rn:
+            except Loan.DoesNotExist as rn:
                 response_data = {
                     'response': 2,
                 }
@@ -53,7 +71,7 @@ def index_view(request):
         op = request.POST.get('flag', 0)
         if op == "sas":
             '''
-            Save and add student to a Registry
+            Save and add student to a Loan
             '''
             student = Student()
             student.name = request.POST.get('sas_name', '')
@@ -62,14 +80,14 @@ def index_view(request):
             prog_cod = request.POST.get('sas_progs', None)
             student.program = Program.objects.get(cod=prog_cod)
             student.save()
-            reg = Registry()
-            reg.student = student
             pc = Pc()
-            pc.num = 1
+            pc.num = 2
             pc.pc_disp = False
             pc.save()
-            reg.pc = pc
-            reg.save()
+            loan = Loan()
+            loan.student = student
+            loan.pc = pc
+            loan.save()
 
         elif op == "2":
             '''
@@ -96,14 +114,16 @@ def index_view(request):
 
     form_sas = FormSAS()
     form_addprog = FormAddProg()
-    reg_list = list(Registry.objects.values())
-    print(reg_list)
+    loan_list = list(Loan.objects.all())
     programs = list(Program.objects.values('name', 'cod'))
     context = {
-        'list': reg_list,
+        'list': loan_list,
         'form_sas': form_sas,
         'form_addprog': form_addprog,
         'programs': programs
     }
     template = loader.get_template('Index.html')
     return HttpResponse(template.render(context, request))
+
+
+

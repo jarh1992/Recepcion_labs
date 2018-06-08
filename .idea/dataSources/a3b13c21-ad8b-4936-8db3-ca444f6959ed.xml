@@ -21,9 +21,9 @@
     <table id="13" parent="2" name="django_content_type"/>
     <table id="14" parent="2" name="django_migrations"/>
     <table id="15" parent="2" name="django_session"/>
-    <table id="16" parent="2" name="registro_pc"/>
-    <table id="17" parent="2" name="registro_program"/>
-    <table id="18" parent="2" name="registro_registry"/>
+    <table id="16" parent="2" name="registro_loan"/>
+    <table id="17" parent="2" name="registro_pc"/>
+    <table id="18" parent="2" name="registro_program"/>
     <table id="19" parent="2" name="registro_student"/>
     <table id="20" parent="2" name="sqlite_master">
       <System>1</System>
@@ -439,110 +439,110 @@ model</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_django_session_1</UnderlyingIndexName>
     </key>
-    <column id="105" parent="16" name="num">
-      <Position>1</Position>
-      <DataType>integer|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="106" parent="16" name="pc_disp">
-      <Position>2</Position>
-      <DataType>bool|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <key id="107" parent="16">
-      <ColNames>num</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="108" parent="17" name="id">
+    <column id="105" parent="16" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="109" parent="17" name="name">
-      <Position>2</Position>
-      <DataType>varchar(60)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="110" parent="17" name="cod">
-      <Position>3</Position>
-      <DataType>varchar(3)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="111" parent="17" name="sqlite_autoindex_registro_program_1">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>cod</ColNames>
-      <ColumnCollations></ColumnCollations>
-      <Unique>1</Unique>
-    </index>
-    <key id="112" parent="17">
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <key id="113" parent="17">
-      <ColNames>cod</ColNames>
-      <UnderlyingIndexName>sqlite_autoindex_registro_program_1</UnderlyingIndexName>
-    </key>
-    <column id="114" parent="18" name="id">
-      <Position>1</Position>
-      <DataType>integer|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="115" parent="18" name="entry_time">
+    <column id="106" parent="16" name="entry_time">
       <Position>2</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="116" parent="18" name="departure_time">
+    <column id="107" parent="16" name="departure_time">
       <Position>3</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="117" parent="18" name="pc_id">
+    <column id="108" parent="16" name="pc_id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="118" parent="18" name="student_id">
+    <column id="109" parent="16" name="student_id">
       <Position>5</Position>
       <DataType>varchar(60)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="119" parent="18" name="sqlite_autoindex_registro_registry_1">
+    <index id="110" parent="16" name="sqlite_autoindex_registro_loan_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>pc_id</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <index id="120" parent="18" name="sqlite_autoindex_registro_registry_2">
+    <index id="111" parent="16" name="sqlite_autoindex_registro_loan_2">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>student_id</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="121" parent="18">
+    <key id="112" parent="16">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="122" parent="18">
+    <key id="113" parent="16">
       <ColNames>pc_id</ColNames>
-      <UnderlyingIndexName>sqlite_autoindex_registro_registry_1</UnderlyingIndexName>
+      <UnderlyingIndexName>sqlite_autoindex_registro_loan_1</UnderlyingIndexName>
     </key>
-    <key id="123" parent="18">
+    <key id="114" parent="16">
       <ColNames>student_id</ColNames>
-      <UnderlyingIndexName>sqlite_autoindex_registro_registry_2</UnderlyingIndexName>
+      <UnderlyingIndexName>sqlite_autoindex_registro_loan_2</UnderlyingIndexName>
     </key>
-    <foreign-key id="124" parent="18">
+    <foreign-key id="115" parent="16">
       <ColNames>pc_id</ColNames>
       <RefTableName>registro_pc</RefTableName>
       <RefColNames>num</RefColNames>
     </foreign-key>
-    <foreign-key id="125" parent="18">
+    <foreign-key id="116" parent="16">
       <ColNames>student_id</ColNames>
       <RefTableName>registro_student</RefTableName>
       <RefColNames>ced</RefColNames>
     </foreign-key>
+    <column id="117" parent="17" name="num">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="118" parent="17" name="pc_disp">
+      <Position>2</Position>
+      <DataType>bool|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="119" parent="17">
+      <ColNames>num</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="120" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="121" parent="18" name="name">
+      <Position>2</Position>
+      <DataType>varchar(60)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="122" parent="18" name="cod">
+      <Position>3</Position>
+      <DataType>varchar(3)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="123" parent="18" name="sqlite_autoindex_registro_program_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cod</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="124" parent="18">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="125" parent="18">
+      <ColNames>cod</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_registro_program_1</UnderlyingIndexName>
+    </key>
     <column id="126" parent="19" name="name">
       <Position>1</Position>
       <DataType>varchar(60)|0s</DataType>
@@ -575,11 +575,9 @@ model</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <index id="132" parent="19" name="sqlite_autoindex_registro_student_3">
-      <NameSurrogate>1</NameSurrogate>
+    <index id="132" parent="19" name="registro_student_program_id_66e1249f">
       <ColNames>program_id</ColNames>
       <ColumnCollations></ColumnCollations>
-      <Unique>1</Unique>
     </index>
     <key id="133" parent="19">
       <ColNames>ced</ColNames>
@@ -590,39 +588,35 @@ model</ColNames>
       <ColNames>cod</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_registro_student_2</UnderlyingIndexName>
     </key>
-    <key id="135" parent="19">
-      <ColNames>program_id</ColNames>
-      <UnderlyingIndexName>sqlite_autoindex_registro_student_3</UnderlyingIndexName>
-    </key>
-    <foreign-key id="136" parent="19">
+    <foreign-key id="135" parent="19">
       <ColNames>program_id</ColNames>
       <RefTableName>registro_program</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="137" parent="20" name="type">
+    <column id="136" parent="20" name="type">
       <Position>1</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="138" parent="20" name="name">
+    <column id="137" parent="20" name="name">
       <Position>2</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="139" parent="20" name="tbl_name">
+    <column id="138" parent="20" name="tbl_name">
       <Position>3</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="140" parent="20" name="rootpage">
+    <column id="139" parent="20" name="rootpage">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
     </column>
-    <column id="141" parent="20" name="sql">
+    <column id="140" parent="20" name="sql">
       <Position>5</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="142" parent="21" name="name">
+    <column id="141" parent="21" name="name">
       <Position>1</Position>
     </column>
-    <column id="143" parent="21" name="seq">
+    <column id="142" parent="21" name="seq">
       <Position>2</Position>
     </column>
   </database-model>
