@@ -48,7 +48,7 @@
                     <tbody>
                     {% for object in list %}
                         <tr>
-                            <td>{{ object.id }}</td>
+                            <td>{{ object.student.name }}</td>
                             <td>{{ object.student_id }}</td>
                             <td>{{ object.student.cod }}</td>
                             <td>{{ object.student.program }}</td>
@@ -67,6 +67,8 @@
     {% include 'modalDAP.html' %}
 
     {% include 'modalSAS.html' %}
+    {% include 'modalFS.html' %}
+
 
     <div class="modal fade" tabindex="-1" id="modalAoE" role="dialog">
         <div class="modal-dialog" role="document">
@@ -131,19 +133,26 @@
 
             request.done(function(msg) {
                 let obj = JSON.parse(msg);
+                let input_cod = $("#input_cod").val();
                 switch(obj.response) {
                     case 0:
                         alert("Error");
                         break;
                     case 1:
-                        $("#sas_cod").val($("#input_cod").val());
+                        $("#sas_cod").val(input_cod);
                         $("#modalSAS").modal();
                         break;
                     case 2:
-                        $("#modalAoE").modal();
+                        $("#modalAoD").modal();
                         break;
                     case 3:
-                        $("#modalFinServ").modal();
+                        let obj2 = JSON.parse(obj.loan);
+                        $("#fs_name").text(obj2[0].fields.name);
+                        $("#fs_ced").text(obj2[0].pk);
+                        $("#fs_cod").text(obj2[0].fields.cod);
+                        $("#fs_et").text(obj2[1].fields.entry_time);
+                        $("#fs_pc").text(obj2[1].fields.pc);
+                        $("#modalFS").modal();
                         break;
                     case 4:
                         $("#modalAddProg").modal();

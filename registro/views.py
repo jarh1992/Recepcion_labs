@@ -6,6 +6,7 @@ import json
 from django.template import loader
 from django.shortcuts import render_to_response
 from .forms import *
+from django.core import serializers
 
 '''
 class IndexView(ListView):
@@ -48,8 +49,11 @@ def index_view(request):
         if id is not None:
             try:
                 student = Student.objects.get(ced=id)
-                registry = Loan.objects.get(student=student)
-                response = 3
+                loan = Loan.objects.get(student=student)
+                response_data = {
+                    'response': 3,
+                    'loan': serializers.serialize('json', (student, loan))
+                }
             except Student.DoesNotExist as sn:
                 progs = list(Program.objects.values('name', 'cod'))
                 response_data = {
@@ -60,8 +64,8 @@ def index_view(request):
                 response_data = {
                     'response': 2,
                 }
-            except Exception:
-                print(Exception, 'er 3')
+            except Exception as ex:
+                print(type(ex).__name__, ex.args, '3')
         else:
             response_data = {
                 'response': 0
@@ -89,13 +93,13 @@ def index_view(request):
             loan.pc = pc
             loan.save()
 
-        elif op == "2":
+        elif op == "fs":
             '''
-            finalizar servicio (liberar Student y Pc)
+            finish service (release Student and Pc)
             '''
-        elif op == "3":
+        elif op == "al":
             '''
-            Agregar a Registry / eliminar Student
+            add Student to Loan / delete Student
             '''
         elif op == "nap":
             '''
