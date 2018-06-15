@@ -1,0 +1,36 @@
+<!-- Lend pc or Delete Student -->
+{% extends 'modalBase.html' %}
+{% block id_modal %}modalLDS{% endblock %}
+{% block title %} Prestar Pc o Eliminar Estudiante {% endblock %}
+{% block value-flag %}lds{% endblock %}
+{% block modal-body-form %}
+    <div class="form-group row">
+        <label for="lds_name" class="col-sm-4">Nombre:</label>
+        <div class="col-sm-8">
+            <p id="lds_name"></p>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="lds_ced" class="col-sm-4">Cédula:</label>
+        <div class="col-sm-8">
+            <p id="lds_ced"></p>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="lds_cod" class="col-sm-4">Codigo estudiantil:</label>
+        <div class="col-sm-8">
+            <p id="lds_cod"></p>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="lds_prog" class="col-sm-4">Programa de Estudio:</label>
+        <div class="col-sm-8">
+            <p id="lds_prog"></p>
+        </div>
+    </div>
+{% endblock %}
+{%  block action-btn-class %} btn btn-primary {% endblock %}
+{%  block action-btn-text %} Prestar {% endblock %}
+{% block another-button %}
+    <button name="action_button" type="submit" class="btn btn-danger">Eliminar</button>
+{% endblock %}
