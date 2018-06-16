@@ -17,3 +17,7 @@ class FormSAS(forms.Form):
 class FormAddProg(forms.Form):
     name = forms.CharField(max_length=60, widget=input_field, label='Nombre')
     cod = forms.CharField(required=True, widget=input_field, label='Codigo del Programa')
+
+
+class FormAddPc(forms.Form):
+    num = forms.CharField(max_length=60, widget=input_field, label='Numero')

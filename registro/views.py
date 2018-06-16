@@ -24,31 +24,30 @@ class IndexView(ListView):
 
 def create_obj(obj_type: str, *req: object) -> object:
     if obj_type == 'student':
-        student = Student()
-        student.name = req[0].get('sas_name', '')
-        student.ced = req[0].get('sas_ced', '')
-        student.cod = req[0].get('sas_cod', '')
         prog_cod = req[0].get('sas_cod', '')
-        student.program = Program.objects.get(cod=prog_cod)
-        student.save()
+        student = Student.objects.create(
+            name=req[0].get('sas_name', ''),
+            ced=req[0].get('sas_ced', ''),
+            cod=req[0].get('sas_cod', ''),
+            program=Program.objects.get(cod=prog_cod)
+        )
         return student
     elif obj_type == 'pc':
-        pc = Pc()
-        pc.num = 2
-        pc.pc_disp = False
-        pc.save()
+        pc = Pc.objects.create(
+            num=req[0].get('num', '')
+        )
         return pc
     elif obj_type == 'program':
-        program = Program()
-        program.name = req[0].get('name', None)
-        program.cod = req[0].get('cod', None)
-        program.save()
+        program = Program.objects.create(
+            name=req[0].get('name', None),
+            cod=req[0].get('cod', None)
+        )
         return program
     elif obj_type == 'loan':
-        loan = Loan()
-        loan.student = req[1]
-        loan.pc = req[2]
-        loan.save()
+        loan = Loan.objects.create(
+            student=req[1],
+            pc=req[2]
+        )
         return loan
 
 
@@ -73,19 +72,20 @@ def index_view(request):
                         'response': 2,
                         'data': serializers.serialize('json', (student, student.program))
                     }
-            except Student.DoesNotExist as sn:
+            except Student.DoesNotExist:
                 progs = list(Program.objects.values('name', 'cod'))
-                response_data['response'] = {
+                response_data = {
                     'response': 1,
                     'programs': progs
                 }
-            except Loan.DoesNotExist as rn:
+            except Loan.DoesNotExist:
                 response_data['response'] = 2
             except Exception as ex:
                 print(type(ex).__name__, ex.args, '3')
         else:
             response_data['response'] = 0
         return HttpResponse(json.dumps(response_data), content_type="application/json")
+
     elif request.method == 'POST':
         op = request.POST.get('flag', 0)
         if op == "sas":
@@ -98,6 +98,8 @@ def index_view(request):
             # evaluar disponibilidad de pc
 
             pc = create_obj('pc')
+            pc.pc_disp = False
+            pc.save()
 
             create_obj('loan', request.POST, student, pc)
 
@@ -117,6 +119,7 @@ def index_view(request):
             '''
             add Student to Loan / delete Student
             '''
+
         elif op == "nap":
             '''
             New academic program
@@ -131,18 +134,37 @@ def index_view(request):
             cod = request.POST.get('del', None)
             Program.objects.filter(cod=cod).delete()
 
+        elif op == "npc":
+            '''
+            New pc
+            '''
+            create_obj('pc', request.POST)
+
     form_sas = FormSAS()
     form_addprog = FormAddProg()
+    form_addpc = FormAddPc()
     loan_list = list(Loan.objects.all())
     programs = list(Program.objects.values('name', 'cod'))
     context = {
         'list': loan_list,
         'form_sas': form_sas,
         'form_addprog': form_addprog,
+        'form_addpc': form_addpc,
         'programs': programs
     }
     template = loader.get_template('Index.html')
     return HttpResponse(template.render(context, request))
 
 
+def pc_view(request):
+    if request.is_ajax():
+        pass
+    if request.method == 'POST':
+        pass
 
+    pc_list = list(Pc.objects.all())
+    context = {
+        'list': pc_list,
+    }
+    template = loader.get_template('Pc.html')
+    return HttpResponse(template.render(context, request))
