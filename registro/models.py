@@ -20,11 +20,11 @@ class Student(models.Model):
 
 
 class Pc(models.Model):
-    num = models.IntegerField(primary_key=True, blank=False, null=False, unique=True)
+    name = models.CharField(max_length=10, blank=False, null=False, unique=True, default='None')
     pc_disp = models.BooleanField(default=True)
 
     def __str__(self):
-        return self.num
+        return self.name
 
 
 class Loan(models.Model):

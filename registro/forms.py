@@ -20,4 +20,4 @@ class FormAddProg(forms.Form):
 
 
 class FormAddPc(forms.Form):
-    num = forms.CharField(max_length=60, widget=input_field, label='Numero')
+    name = forms.CharField(max_length=60, widget=input_field, label='Numero')

@@ -24,17 +24,18 @@ class IndexView(ListView):
 
 def create_obj(obj_type: str, *req: object) -> object:
     if obj_type == 'student':
-        prog_cod = req[0].get('sas_cod', '')
+        prog_cod = req[0].get('sas_progs', '')
+        program = Program.objects.get(cod=prog_cod)
         student = Student.objects.create(
             name=req[0].get('sas_name', ''),
             ced=req[0].get('sas_ced', ''),
             cod=req[0].get('sas_cod', ''),
-            program=Program.objects.get(cod=prog_cod)
+            program=program
         )
         return student
     elif obj_type == 'pc':
         pc = Pc.objects.create(
-            num=req[0].get('num', '')
+            name=req[0].get('name', '')
         )
         return pc
     elif obj_type == 'program':
@@ -97,11 +98,9 @@ def index_view(request):
 
             # evaluar disponibilidad de pc
 
-            pc = create_obj('pc')
-            pc.pc_disp = False
-            pc.save()
+            # pc = add existsent pc
 
-            create_obj('loan', request.POST, student, pc)
+            # create_obj('loan', request.POST, student, pc)
 
         elif op == "fs":
             '''
@@ -142,14 +141,12 @@ def index_view(request):
 
     form_sas = FormSAS()
     form_addprog = FormAddProg()
-    form_addpc = FormAddPc()
     loan_list = list(Loan.objects.all())
     programs = list(Program.objects.values('name', 'cod'))
     context = {
         'list': loan_list,
         'form_sas': form_sas,
         'form_addprog': form_addprog,
-        'form_addpc': form_addpc,
         'programs': programs
     }
     template = loader.get_template('Index.html')
@@ -163,8 +160,11 @@ def pc_view(request):
         pass
 
     pc_list = list(Pc.objects.all())
+    print(pc_list)
+    form_addpc = FormAddPc()
     context = {
         'list': pc_list,
+        'form_addpc': form_addpc
     }
     template = loader.get_template('Pc.html')
     return HttpResponse(template.render(context, request))
