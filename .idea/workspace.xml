@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="669364f9-9c68-409f-a0ea-2bb4271bc616" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a3b13c21-ad8b-4936-8db3-ca444f6959ed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a3b13c21-ad8b-4936-8db3-ca444f6959ed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recepcion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recepcion/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registro/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Pc.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Pc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index-modals/modalBase.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index-modals/modalBase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index-modals/modalDAP.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index-modals/modalDAP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index-modals/modalFS.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index-modals/modalFS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index-modals/modalLDS.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index-modals/modalLDS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index-modals/modalNAP.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index-modals/modalNAP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index-modals/modalSAS.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index-modals/modalSAS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pc-modals/modalNPc.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pc-modals/modalNPc.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,11 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/registro/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="162" column="17" selection-start-line="162" selection-start-column="17" selection-end-line="162" selection-end-column="17" />
+            <state relative-caret-position="235">
+              <caret line="162" selection-start-line="162" selection-end-line="162" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -51,33 +52,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Recepcion/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/Index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="51" column="62" lean-forward="true" selection-start-line="51" selection-start-column="62" selection-end-line="51" selection-end-column="62" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="18" column="138" lean-forward="true" selection-start-line="18" selection-start-column="122" selection-end-line="18" selection-end-column="138" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pc.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Pc.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/Pc.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="33" column="60" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
+            <state relative-caret-position="-357">
+              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+              <folding>
+                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,17 +77,8 @@
       <file leaf-file-name="modalNPc.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/pc-modals/modalNPc.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/registro/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="22" column="77" lean-forward="true" selection-start-line="22" selection-start-column="77" selection-end-line="22" selection-end-column="77" />
+            <state relative-caret-position="68">
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -152,15 +135,21 @@
         <option value="$PROJECT_DIR$/templates/modalLDS.html" />
         <option value="$PROJECT_DIR$/static/js/popper.min.js.map" />
         <option value="$PROJECT_DIR$/templates/CrudPCs.html" />
-        <option value="$PROJECT_DIR$/templates/pc-modals/modalNPc.html" />
         <option value="$PROJECT_DIR$/templates/pc.html" />
         <option value="$PROJECT_DIR$/Recepcion/urls.py" />
         <option value="$PROJECT_DIR$/registro/models.py" />
         <option value="$PROJECT_DIR$/templates/Index.html" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/a3b13c21-ad8b-4936-8db3-ca444f6959ed/console.sql" />
         <option value="$PROJECT_DIR$/registro/forms.py" />
-        <option value="$PROJECT_DIR$/registro/views.py" />
         <option value="$PROJECT_DIR$/templates/Pc.html" />
+        <option value="$PROJECT_DIR$/templates/index-modals/modalBase.html" />
+        <option value="$PROJECT_DIR$/templates/pc-modals/modalNPc.html" />
+        <option value="$PROJECT_DIR$/templates/index-modals/modalDAP.html" />
+        <option value="$PROJECT_DIR$/templates/index-modals/modalFS.html" />
+        <option value="$PROJECT_DIR$/templates/index-modals/modalLDS.html" />
+        <option value="$PROJECT_DIR$/templates/index-modals/modalNAP.html" />
+        <option value="$PROJECT_DIR$/templates/index-modals/modalSAS.html" />
+        <option value="$PROJECT_DIR$/registro/views.py" />
       </list>
     </option>
   </component>
@@ -186,7 +175,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -213,12 +201,19 @@
               <item name="Recepcion_labs" type="b2602c69:ProjectViewProjectNode" />
               <item name="Recepcion_labs" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="index-modals" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Recepcion_labs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Recepcion_labs" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="pc-modals" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -290,6 +285,14 @@
       <option name="presentableId" value="Default" />
       <updated>1526416949355</updated>
     </task>
+    <task id="LOCAL-00001" summary="arreglo base de datos y continuacion crud pc&#10;falta filtro de pc para registrar estudiante">
+      <created>1529545160705</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1529545160705</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -306,14 +309,13 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="13" sideWeight="0.4993573" weight="0.32882273" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50321335" side_tool="true" weight="0.27198917" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5051414" side_tool="true" weight="0.3504736" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49807197" weight="0.29499322" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49485862" weight="0.3504736" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.33423546" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49678662" visible="true" weight="0.27198917" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.2909337" />
-      <window_info anchor="bottom" id="Database Console" order="10" weight="0.32882273" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15938303" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16131106" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" visible="true" weight="0.12403599" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32969153" />
@@ -326,11 +328,38 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="10" weight="0.32882273" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32882273" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -340,6 +369,8 @@
       <path value="$PROJECT_DIR$/Recepcion" />
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+    <MESSAGE value="arreglo base de datos y continuacion crud pc&#10;falta filtro de pc para registrar estudiante" />
+    <option name="LAST_COMMIT_MESSAGE" value="arreglo base de datos y continuacion crud pc&#10;falta filtro de pc para registrar estudiante" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -469,13 +500,6 @@
     <entry file="file://$PROJECT_DIR$/templates/modalUP.html" />
     <entry file="file://$PROJECT_DIR$/templates/modalProg-bodyfooter.html" />
     <entry file="file://$PROJECT_DIR$/templates/modalUAP.html" />
-    <entry file="file://$PROJECT_DIR$/templates/index-modals/modalNAP.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://42d66966-e28c-4b5b-99a7-44e69988d270/schema/main/table/registro_registry" />
     <entry file="das://42d66966-e28c-4b5b-99a7-44e69988d270/schema/main/table/registro_program" />
     <entry file="das://42d66966-e28c-4b5b-99a7-44e69988d270/schema/main/table/registro_student" />
@@ -490,13 +514,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="das://a3b13c21-ad8b-4936-8db3-ca444f6959ed/schema/main/table/registro_registry" />
-    <entry file="file://$PROJECT_DIR$/templates/index-modals/modalDAP.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/popper.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -508,31 +525,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index-modals/modalLDS.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index-modals/modalFS.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://a3b13c21-ad8b-4936-8db3-ca444f6959ed/schema/main/table/registro_loan">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index-modals/modalBase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="104" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="104" />
         </state>
       </provider>
     </entry>
@@ -587,52 +583,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index-modals/modalSAS.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/registro/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="22" column="77" lean-forward="true" selection-start-line="22" selection-start-column="77" selection-end-line="22" selection-end-column="77" />
+        <state relative-caret-position="374">
+          <caret line="22" column="77" selection-start-line="22" selection-start-column="77" selection-end-line="22" selection-end-column="77" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="51" column="62" lean-forward="true" selection-start-line="51" selection-start-column="62" selection-end-line="51" selection-end-column="62" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="18" column="138" lean-forward="true" selection-start-line="18" selection-start-column="122" selection-end-line="18" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index-modals/modalFS.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index-modals/modalLDS.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index-modals/modalNAP.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index-modals/modalSAS.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index-modals/modalBase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index-modals/modalDAP.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="50" lean-forward="true" selection-start-line="3" selection-start-column="50" selection-end-line="4" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/pc-modals/modalNPc.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/registro/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="162" column="17" selection-start-line="162" selection-start-column="17" selection-end-line="162" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Pc.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="33" column="60" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
+        <state relative-caret-position="-357">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registro/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="162" selection-start-line="162" selection-end-line="162" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

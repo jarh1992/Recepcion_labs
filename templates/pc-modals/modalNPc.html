@@ -2,6 +2,7 @@
 {% extends 'index-modals/modalBase.html' %}
 {%  block id_modal %}modalNPc{% endblock %}
 {%  block title %} Nuevo Pc {% endblock %}
+{% block url %}{% url 'pc' %}{% endblock %}
 {%  block value-flag %}npc{% endblock %}
 {% block modal-body-form %} {{ form_addpc }} {% endblock %}
 {%  block action-btn-class %} btn btn-primary {% endblock %}

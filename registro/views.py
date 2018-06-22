@@ -133,12 +133,6 @@ def index_view(request):
             cod = request.POST.get('del', None)
             Program.objects.filter(cod=cod).delete()
 
-        elif op == "npc":
-            '''
-            New pc
-            '''
-            create_obj('pc', request.POST)
-
     form_sas = FormSAS()
     form_addprog = FormAddProg()
     loan_list = list(Loan.objects.all())
@@ -155,9 +149,25 @@ def index_view(request):
 
 def pc_view(request):
     if request.is_ajax():
-        pass
+        # response_data = {}
+        id = request.POST.get('id', None)
+        if request.POST.get('fun') == 'updt':
+            pc = Pc.objects.get(id=id)
+            if pc.pc_disp is True:
+                pc.pc_disp = False
+            else:
+                pc.pc_disp = True
+            pc.save()
+        elif request.POST.get('fun') == 'del':
+            Pc.objects.get(id=id).delete()
+        # return HttpResponse(json.dumps(response_data), content_type="application/json")
     if request.method == 'POST':
-        pass
+        op = request.POST.get('flag', 0)
+        if op == "npc":
+            '''
+            New pc
+            '''
+            create_obj('pc', request.POST)
 
     pc_list = list(Pc.objects.all())
     print(pc_list)

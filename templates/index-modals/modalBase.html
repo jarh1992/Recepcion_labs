@@ -7,7 +7,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="{% url 'index' %}" method="post"> {% csrf_token %}
+            <form action="{% block url %}{% endblock %}" method="post"> {% csrf_token %}
                 <input name="flag" type="text" value="{%  block value-flag %}{% endblock %}" hidden>
                 <div class="modal-body">
                     {% block modal-body-form %}{% endblock %}

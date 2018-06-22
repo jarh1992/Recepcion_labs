@@ -14,11 +14,21 @@
     <main class="container col-sm-4" align="center" style="margin-top: 20px;">
         <div class="row mt-3" align="center">
             <div class="table-responsive">
-                <table class="table table-bordered table-dark">
+                <table class="table table-bordered table-dark">{% csrf_token %}
                     <thead>
                         <tr>
-                            <th scope="col">Numero PC</th>
-                            <th scope="col">Estado</th>
+                            <th scope="col" style="margin: auto;">Numero PC</th>
+                            <th scope="col">
+                                <p style="float: left; margin: auto;">Estado</p>
+                                <div align="right">
+                                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#modalNPc">
+                                        <i class="fas fa-check"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalNPc">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </th>
                             <th scope="col">
                                 <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalNPc">
                                     <i class="fas fa-plus"></i>
@@ -38,10 +48,10 @@
                                 {% endif %}
                             </td>
                             <td>
-                                <button type="button" class="btn btn-info btn-sm" id="changeState">
+                                <button type="button" class="btn btn-info btn-sm" id="changeState" onclick="action(0, {{ object.id }})">
                                     <i class="fas fa-sync"></i>
                                 </button>
-                                <button type="button" class="btn btn-danger btn-sm" id="delPc">
+                                <button type="button" class="btn btn-danger btn-sm" id="delPc" onclick="action(1, {{ object.id }})">
                                     <i class="fas fa-minus"></i>
                                 </button>
                             </td>
@@ -54,5 +64,74 @@
     </main>
 
     {% include 'pc-modals/modalNPc.html' %}
+
+    <script type="text/javascript">
+        function action(param, param2){
+            let id = param2;
+            let request;
+            const csrftoken = getCookie('csrftoken');
+            if (param === 0){
+                request = $.ajax({
+                    url: '{% url 'pc' %}',
+                    type: "POST",
+                    data: {
+                        'id': id,
+                        'fun': 'updt',
+                        csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]')[0].value,
+                    },
+                    dataType: "html"
+                });
+            }else if (param === 1){
+                request = $.ajax({
+                    url: '{% url 'pc' %}',
+                    type: "POST",
+                    data: {
+                        'id': id,
+                        'fun': 'del',
+                        csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]')[0].value,
+                    },
+                    dataType: "html"
+                });
+            }
+
+
+            request.done(function(msg) {
+                location.reload(true);
+            });
+
+            request.fail(function(jqXHR, textStatus) {
+                alert( "Request failed: " + textStatus );
+            });
+
+            $.ajaxSetup({
+                beforeSend: function(xhr, settings) {
+                    if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                    }
+                }
+            });
+        }
+
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                let cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    let cookie = jQuery.trim(cookies[i]);
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        function csrfSafeMethod(method) {
+            // these HTTP methods do not require CSRF protection
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+    </script>
 </body>
 </html>
