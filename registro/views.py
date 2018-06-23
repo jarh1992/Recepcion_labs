@@ -23,33 +23,30 @@ class IndexView(ListView):
 
 
 def create_obj(obj_type: str, *req: object) -> object:
+    obj = None
     if obj_type == 'student':
         prog_cod = req[0].get('sas_progs', '')
-        program = Program.objects.get(cod=prog_cod)
-        student = Student.objects.create(
+        obj = Student.objects.create(
             name=req[0].get('sas_name', ''),
             ced=req[0].get('sas_ced', ''),
             cod=req[0].get('sas_cod', ''),
-            program=program
+            program=Program.objects.get(cod=prog_cod)
         )
-        return student
     elif obj_type == 'pc':
-        pc = Pc.objects.create(
+        obj = Pc.objects.create(
             name=req[0].get('name', '')
         )
-        return pc
     elif obj_type == 'program':
-        program = Program.objects.create(
+        obj = Program.objects.create(
             name=req[0].get('name', None),
             cod=req[0].get('cod', None)
         )
-        return program
     elif obj_type == 'loan':
-        loan = Loan.objects.create(
+        obj = Loan.objects.create(
             student=req[1],
             pc=req[2]
         )
-        return loan
+    return obj
 
 
 def index_view(request):
@@ -149,9 +146,20 @@ def index_view(request):
 
 def pc_view(request):
     if request.is_ajax():
-        # response_data = {}
+        print('ajax')
         id = request.POST.get('id', None)
-        if request.POST.get('fun') == 'updt':
+
+        def update_all_pcs(state):
+            pcs = Pc.objects.all()
+            for pc in pcs:
+                pc.pc_disp = state
+                pc.save()
+
+        if request.POST.get('fun') == 'all_av':
+            update_all_pcs(True)
+        elif request.POST.get('fun') == 'not_av':
+            update_all_pcs(False)
+        elif request.POST.get('fun') == 'updt':
             pc = Pc.objects.get(id=id)
             if pc.pc_disp is True:
                 pc.pc_disp = False
@@ -160,8 +168,9 @@ def pc_view(request):
             pc.save()
         elif request.POST.get('fun') == 'del':
             Pc.objects.get(id=id).delete()
-        # return HttpResponse(json.dumps(response_data), content_type="application/json")
-    if request.method == 'POST':
+        return HttpResponse(content_type="application/json")
+    elif request.method == 'POST':
+        print('post')
         op = request.POST.get('flag', 0)
         if op == "npc":
             '''
@@ -170,7 +179,6 @@ def pc_view(request):
             create_obj('pc', request.POST)
 
     pc_list = list(Pc.objects.all())
-    print(pc_list)
     form_addpc = FormAddPc()
     context = {
         'list': pc_list,
